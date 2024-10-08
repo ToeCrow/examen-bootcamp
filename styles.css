@@ -22,10 +22,15 @@ a:focus {
 body {
  margin: 0;
  padding: 0;
- display: flex;
+ display: grid;
  flex-direction: column;
- /* align-items: center; */
  height: 100vh;
+ grid-template-areas: 
+ "header"
+ "left-button"
+ "main"
+ "right-button"
+ "footer";
 }
 
 /* header */
@@ -34,7 +39,7 @@ header {
  color: yellow;
  top: 0;
  padding: 1rem 1rem .25rem 1rem;
- /* width: 100vw; */
+ grid-area: header;
 }
 
 .oreo-h1 {
@@ -70,7 +75,26 @@ nav ul li a {
 }
 
 main {
- align-self: center;
+ grid-area: main;
+ 
+}
+
+.hero {
+ display: flex;
+
+}
+
+.hero img {
+ justify-self: center;
+ 
+}
+
+.left-button {
+ grid-area: left-button;
+}
+
+.right-button {
+ grid-area: right-button;
 }
 
 .left-button,
@@ -113,10 +137,6 @@ html {
  font-size: 12px;
 }
 
-.hero img {
- height: 100%;
-}
-
 body {
  display: grid;
  grid-template-areas: 
@@ -135,32 +155,28 @@ header{
   grid-area: main;
  }
 
+ #hero img {
+  height: 100%;
+  object-fit: contain;
+ }
+
 .left-button,
 .right-button {
- height: 80%;
+ height: 40%;
  width: 90%;
- grid-area: left-button;
- /* border: 1px solid blue;
- background-color: aqua;
- font-size: clamp(1rem, 2vw + 1rem, 2rem);
- border-radius: 2rem;
- margin: 1rem; */
+ align-self: center;    
+ justify-self: center;  
 }
 
 
-/* .left-button {
+.left-button {
  grid-area: left-button;
 }
 
 .right-button {
  grid-area: right-button;
-} */
-
-
-.right-button {
- position: relative;
- top: 20rem;
 }
+
 
 footer {
  position: relative;
@@ -179,7 +195,7 @@ footer {
  } 
 
 #hem {
- height: 100vh;
+ /* height: 100vh; */
  display: grid;
  grid-template-rows: auto 1fr auto; /* Header, main, footer */
  grid-template-columns: 1fr auto 1fr;
@@ -193,37 +209,38 @@ header{
  grid-area: header;
  }
  
-
-
 /* Main */
 .main-start {
  grid-area: main;
- display: grid;
- grid-template-columns: 1fr auto 1fr; 
  align-items: center;
  justify-items: center;
+ height: 100%;
 }
 
 #hero img {
- height: 100%; 
+ max-width: 100%; /* Använd max bredd för att passa i layouten */
+ height: 100%;
+ margin: 0 auto;
+ object-fit: contain;
 }
 
 #hero {
  padding: 0;
  margin:0;
  height: 100%;
- grid-column: 2; 
 }
 
 .left-button,
 .right-button {
- height: 80%;
- width: 90%;
+ height: 60%;
+ width: 65%;
  border: 1px solid blue;
  background-color: aqua;
  font-size: clamp(1rem, 2vw + 1rem, 2rem);
  border-radius: 2rem;
  margin: 1rem;
+ justify-self: center;
+ align-self: center;
 }
 
 .left-button a,
