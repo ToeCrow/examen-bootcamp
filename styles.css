@@ -1,6 +1,7 @@
 body {
  margin: 0;
  padding: 0;
+ 
 }
 
 /* skiplink och lite tillgänglighet */
@@ -20,31 +21,28 @@ a:focus {
  outline: 3px solid yellow;
 }
 
-#hero {
- height: 50vh;
+#hem {
+ height: 100vh;
+ display: grid;
+ grid-template-rows: auto 1fr auto; /* Header, main, footer */
+ grid-template-areas:
+   "header"
+   "main"
+   "footer";
 }
 
-#main-start {
- grid-template-columns: 1fr 1fr 1fr;
- grid-template-rows: 1fr auto 1fr;
- grid-template-areas: 
- "header header header"
- "bildknapp hero vårdknapp"
- "footer footer footer"
- ;
-}
+
 
 /* header */
 header {
  background-color: blueviolet;
  color: yellow;
- position: relative;
  top: 0;
  padding: 1rem 1rem .25rem 1rem;
  grid-area: header;
 }
 
-h1 {
+.oreo-h1 {
  text-align: center;
  font-size: 4rem;
  margin: 0;
@@ -62,7 +60,6 @@ nav ul{
 nav ul li {
  list-style: none;
  flex-direction: row;
- 
 }
 
 nav ul li a {
@@ -77,19 +74,65 @@ nav ul li a {
  border-bottom: 1px solid rgb(250, 250, 240);
 }
 
-#bildknapp {
- grid-area: bildknapp;
+/* Main */
+.main-start {
+ grid-area: main;
+ display: grid;
+ grid-template-columns: 1fr auto 1fr; /* Två knappar och en bild */
+ align-items: center;
+ justify-items: center;
+ /* padding: 2rem; */
 }
 
-#vårdknapp {
- grid-area: vårdknapp;
+
+#hero img {
+ height: 100%; /* Tar hela höjden */
+ width: 100%; /* Tar hela bredden */
+ object-fit: cover; /* Bilden anpassas utan att förvrängas */
+}
+
+#hero {
+ padding: 0;
+ margin:0;
+ max-width: 100%;
+ height: auto;
+ grid-column: 2; /* Mittkolumnen */
+}
+
+button {
+ height: 100%;
+ width: 100%;
+ border: 1px solid blue;
+ background-color: aqua;
+ display: flex; /* Flexbox för att centrera texten */
+ justify-content: center;
+ align-items: center;
+ font-size: 1.5rem; /* Gör texten i knapparna större */
+}
+
+.left-button {
+ grid-column: 1;
+}
+
+.right-button {
+ grid-column: 3;
+}
+
+button a {
+ display: block;
+ text-decoration: none;
+ color: inherit;
+ text-align: center;
+ /* padding: 1rem; */
+ height: 100%;
+ width: 100%;
 }
 
 footer {
- background-image: url(/images/Innehåll/kia-hamsters\ \(liten\).gif);
+ background-image: url(/images/Innehåll/liten-dansande-hamster.gif);
  background-repeat: repeat;
  background-size: contain;
- position: fixed;
+ position: relative;
  bottom: 0;
  left: 0;
  right: 0;
