@@ -1,0 +1,37 @@
+/* Bild-sidan */
+body {
+ display: flex;
+ flex-direction: column;
+}
+
+h2 {
+ text-align: center;
+}
+
+.fig-bild h3 {
+ text-align: center;
+}
+.fig-bild img {
+ display: inline-block;
+}
+
+.fig-bild {
+ display: flex;
+ flex-direction: column;
+ width: 27%;
+ border: 1px solid black;
+ padding: 1rem;
+ border-radius: 1rem;
+ box-shadow: 1px;
+ align-self: center;
+ margin: 0;
+}
+
+@media (min-width: 1025px){
+.sec-bild {
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 1rem;
+ justify-items: center;
+}
+}

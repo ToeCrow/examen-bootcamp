@@ -1,7 +1,5 @@
-body {
- margin: 0;
- padding: 0;
- 
+html {
+ font-size: 10px;
 }
 
 /* skiplink och lite tillgänglighet */
@@ -21,17 +19,14 @@ a:focus {
  outline: 3px solid yellow;
 }
 
-#hem {
+body {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ /* align-items: center; */
  height: 100vh;
- display: grid;
- grid-template-rows: auto 1fr auto; /* Header, main, footer */
- grid-template-areas:
-   "header"
-   "main"
-   "footer";
 }
-
-
 
 /* header */
 header {
@@ -39,7 +34,7 @@ header {
  color: yellow;
  top: 0;
  padding: 1rem 1rem .25rem 1rem;
- grid-area: header;
+ /* width: 100vw; */
 }
 
 .oreo-h1 {
@@ -74,58 +69,26 @@ nav ul li a {
  border-bottom: 1px solid rgb(250, 250, 240);
 }
 
-/* Main */
-.main-start {
- grid-area: main;
- display: grid;
- grid-template-columns: 1fr auto 1fr; /* Två knappar och en bild */
- align-items: center;
- justify-items: center;
- /* padding: 2rem; */
+main {
+ align-self: center;
 }
 
-
-#hero img {
- height: 100%; /* Tar hela höjden */
- width: 100%; /* Tar hela bredden */
- object-fit: cover; /* Bilden anpassas utan att förvrängas */
-}
-
-#hero {
- padding: 0;
- margin:0;
- max-width: 100%;
- height: auto;
- grid-column: 2; /* Mittkolumnen */
-}
-
-button {
- height: 100%;
- width: 100%;
+.left-button,
+.right-button {
+ height: 35%;
+ width: 90%;
  border: 1px solid blue;
  background-color: aqua;
- display: flex; /* Flexbox för att centrera texten */
- justify-content: center;
- align-items: center;
- font-size: 1.5rem; /* Gör texten i knapparna större */
-}
-
-.left-button {
- grid-column: 1;
-}
-
-.right-button {
- grid-column: 3;
+ font-size: clamp(1rem, 2vw + 1rem, 2rem);
+ border-radius: 2rem;
+ margin: 2rem;
+ align-self: center;
 }
 
 button a {
  display: block;
  text-decoration: none;
- color: inherit;
  text-align: center;
- /* padding: 1rem; */
- height: 100%;
- width: 100%;
 }
 
 footer {
@@ -136,5 +99,152 @@ footer {
  bottom: 0;
  left: 0;
  right: 0;
+}
+
+footer img {
+ height: 5rem;
+ 
+}
+
+/* ******************************************************************* */
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px){
+html {
+ font-size: 12px;
+}
+
+.hero img {
+ height: 100%;
+}
+
+body {
+ display: grid;
+ grid-template-areas: 
+ "header header"
+ "left-button main"
+ "right-button main"
+ "footer footer";
+ grid-template-rows: auto 1fr 1fr auto;
+ grid-template-columns: 1fr 1fr;
+}
+header{
+ grid-area: header;
+ }
+ 
+ .main-start {
+  grid-area: main;
+ }
+
+.left-button,
+.right-button {
+ height: 80%;
+ width: 90%;
+ grid-area: left-button;
+ /* border: 1px solid blue;
+ background-color: aqua;
+ font-size: clamp(1rem, 2vw + 1rem, 2rem);
+ border-radius: 2rem;
+ margin: 1rem; */
+}
+
+
+/* .left-button {
+ grid-area: left-button;
+}
+
+.right-button {
+ grid-area: right-button;
+} */
+
+
+.right-button {
+ position: relative;
+ top: 20rem;
+}
+
+footer {
+ position: relative;
+ bottom: 0;
+ left: 0;
+ right: 0;
  grid-area: footer;
+}
+
+}
+/* ************************************************************************* */
+/* Desktop styles */
+@media (min-width: 1025px){
+ html {
+  font-size: 16px;
+ } 
+
+#hem {
+ height: 100vh;
+ display: grid;
+ grid-template-rows: auto 1fr auto; /* Header, main, footer */
+ grid-template-columns: 1fr auto 1fr;
+ grid-template-areas:
+   "header header header"
+   "left-button main right-button"
+   "footer footer footer";
+}
+
+header{
+ grid-area: header;
+ }
+ 
+
+
+/* Main */
+.main-start {
+ grid-area: main;
+ display: grid;
+ grid-template-columns: 1fr auto 1fr; 
+ align-items: center;
+ justify-items: center;
+}
+
+#hero img {
+ height: 100%; 
+}
+
+#hero {
+ padding: 0;
+ margin:0;
+ height: 100%;
+ grid-column: 2; 
+}
+
+.left-button,
+.right-button {
+ height: 80%;
+ width: 90%;
+ border: 1px solid blue;
+ background-color: aqua;
+ font-size: clamp(1rem, 2vw + 1rem, 2rem);
+ border-radius: 2rem;
+ margin: 1rem;
+}
+
+.left-button a,
+.right-button a {
+ margin-top: 3rem;
+} 
+
+.left-button {
+ grid-area: left-button;
+}
+
+.right-button {
+ grid-area: right-button;
+}
+
+button a{
+ height: 100%;
+ width: 100%;
+}
+
+footer {
+ grid-area: footer;
+}
 }
