@@ -108,10 +108,11 @@ main {
 }
 
 button a {
- display: block;
+ display: flex;
  color: yellow;
  text-decoration: none;
  text-align: center;
+ padding: .5rem;
 }
 
 /* Footer */
