@@ -11,28 +11,28 @@ Då laddas det in och kommer upp en ruta där man kan trycka ”add to workspace
 Sen hittar man index.html och högerklickar på den. Nästa val är ”Open with live server” – då poppar det upp i browser och man är i gång. Väl inne på index.html kan man fortsätta som en vanlig hemsidan man söker upp på nätet.
 
 
-1 HTML-struktur
+1 HTML-struktur <br>
 Jag har semantiska HTML-element med navigationsmeny och den finns på alla sidor.
 skulle kunnat ta bort nav på förstasidan då hela sidan är som en nav vidare, men enligt uppgiften får den vara kvar.
 
-2/3 CSS-styling och responsiv design
+2/3 CSS-styling och responsiv design<br>
 Jag har flex – row i min nav, och flex – column i mina bilder. (Plus en bonus som var nödvändig för att bilder inte skulle ha två kolumner på lite skärm)
 Det är grid som skapar responsivitet på sidorna annars. En med areas och en utan.
 Försöker vara så tydlig som möjligt med mina CSS-selektorer så det inte blir en plötsligt krock
 Jag gjorde först responsive text med font-size på html och rem som enheter, men det krockade med kravet på clamp, så fick ta bort det till slut, och min header har clamp. Hade en på knapparna som jag trodde funkade, men det var font-size på html som styrde den.
 
-4 Tillgänglighet
+4 Tillgänglighet<br>
 Det finns alt-attribut på alla bilder förutom gifen i footer.
 Har endast h1-h3, men det är rätt struktur
 Fick av lighthouse 100 på allt för min desktop, endast 95 för mobil.
 Alla länkar och knappar har aria-label
 
-5 webbläsarverktyg
+5 webbläsarverktyg<br>
 Det är för snabbt fram och tillbaka för att säga exakt vad man har löst med detta, men det brukar var storlekar, position, och framför allt responsivitet. 
 Kollar över vad som är överflödigt genom att klicka bort, samma som när man kommenterar bort beroende på var man har fokus just då. Har två skärmar, så båda alternativen funkar.
 Fick ändra hover och currentpage färg på bildsidan då den blåa färgen inte hade bra kontrast till den gula. Det blev svart i stället.
 
-6 Git
+6 Git<br>
 Gjorde två brancher med en gång, vilket uppenbarligen var lite för tidigt. När jag kopplade github-repot till datorn skapades ett nytt repo - en mapp i mappen. Så kodade väldigt länge i endast main.
 Gjorde på slutet fler brancher så jag inte skulle få fler krockar än jag redan haft på vägen.
 Gjorde merge mellan bild och main först, sen gjorde jag samma sak med hem och main för att få med hela. Inga konflikter.
