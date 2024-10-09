@@ -2,9 +2,9 @@
 body {
  display: flex;
  flex-direction: column;
- 
 }
 
+/* header */
 header {
  background-color: #0073E6;
  color: #FFFFFF;
@@ -23,6 +23,7 @@ a:hover {
  border-bottom: 1px solid black;
 }
 
+/* main */
 h2 {
  text-align: center;
  font-size: 2rem;
@@ -38,7 +39,7 @@ h2 {
 }
 
 .fig-bild {
- display: flex;
+ display: flex;                  /* *****FLEX***** */
  flex-direction: column;
  align-items: center;
  width: 80%;
@@ -51,6 +52,7 @@ h2 {
  margin: 1rem auto;
 }
 
+/* ************************************************************ */
 @media (min-width: 768px) and (max-width: 1024px){
 .sec-bild {
  display: grid;
@@ -66,16 +68,17 @@ h2 {
 
 .fig-bild img {
  width: 100%;
- height: 200px; /* Alla bilder får samma höjd */
- object-fit: cover; /* Beskär bilden för att fylla utrymmet */
- transition: transform 0.3s ease; /* Smidig övergång för hover */
+ height: 200px; 
+ object-fit: cover; 
+ transition: transform 0.3s ease; 
 }
 
 .fig-bild:hover img {
- transform: scale(1.2); /* Zooma in för att visa mer av bilden */
+ transform: scale(1.2); 
 }
 }
 
+/* ************************************************************ */
 @media (min-width: 1025px){
 .sec-bild {
  display: grid;
@@ -91,14 +94,14 @@ h2 {
 
 .fig-bild img {
  width: 100%;
- height: 300px; /* Alla bilder får samma höjd */
- object-fit: cover; /* Beskär bilden för att fylla utrymmet */
- transition: transform 0.3s ease; /* Smidig övergång för hover */
+ height: 300px; 
+ object-fit: cover; 
+ transition: transform 0.3s ease; 
 }
 
 .fig-bild:hover img {
- height: auto; /* Resets to show full image */
- object-fit: contain; /* Shows entire image without cropping */
- transform: scale(1); /* Reset scale if previously set */
+ height: auto; 
+ object-fit: contain; 
+ transform: scale(1); 
 }
 }
