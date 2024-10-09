@@ -1,7 +1,25 @@
 /* Bild-sidan */
 body {
- display: flex;
- flex-direction: column;
+ /* display: flex;
+ flex-direction: column; */
+}
+
+header {
+ background-color: #0073E6;
+ color: #FFFFFF;
+}
+
+nav ul li a {
+ color: #FFFFFF;
+}
+
+a:hover {
+ color: yellow;
+}
+
+.current-page {
+ color: yellow;
+ border-bottom: 1px solid yellow;
 }
 
 h2 {
