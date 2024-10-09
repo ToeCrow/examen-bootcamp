@@ -15,6 +15,7 @@ h2 {
 .fig-bild img {
  display: inline-block;
  max-width: 95%;
+ margin-bottom: .5rem;
 }
 
 .fig-bild {
@@ -23,6 +24,9 @@ h2 {
  align-items: center;
  width: 80%;
  border: 1px solid black;
+ background-color: #0073E6;
+ color: #FFFFFF;
+
  padding: 1rem;
  border-radius: 1rem;
  margin: 1rem auto;
