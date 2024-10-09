@@ -28,9 +28,10 @@ Fick av lighthouse 100 på allt för min desktop, endast 95 för mobil.
 Alla länkar och knappar har aria-label
 
 5 webbläsarverktyg<br>
-Det är för snabbt fram och tillbaka för att säga exakt vad man har löst med detta, men det brukar var storlekar, position, och framför allt responsivitet. 
-Kollar över vad som är överflödigt genom att klicka bort, samma som när man kommenterar bort beroende på var man har fokus just då. Har två skärmar, så båda alternativen funkar.
-Fick ändra hover och currentpage färg på bildsidan då den blåa färgen inte hade bra kontrast till den gula. Det blev svart i stället.
+Det är för snabbt fram och tillbaka för att säga exakt vad man har löst med detta, men det brukar var storlekar, position, och framför allt responsivitet. <br>
+De stora knapparna på förstasidan var det definitivt mest fram och tillbaka med i detta projektet. <br>
+Kollar över vad som är överflödigt genom att klicka bort, samma som när man kommenterar bort beroende på var man har fokus just då. Har två skärmar, så båda alternativen funkar. <br>
+Det var från början väldigt hög score på lighthouse denna gången. Fick endast ändra hover och currentpage färg på bildsidan då den blåa färgen inte hade bra kontrast till den gula. Det blev svart i stället.
 
 6 Git<br>
 Gjorde två brancher med en gång, vilket uppenbarligen var lite för tidigt. När jag kopplade github-repot till datorn skapades ett nytt repo - en mapp i mappen. Så kodade väldigt länge i endast main.
