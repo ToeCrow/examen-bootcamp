@@ -19,6 +19,7 @@ a:focus {
  outline: 3px solid yellow;
 }
 
+/* Mobil först */
 body {
  margin: 0;
  padding: 0;
@@ -74,6 +75,7 @@ nav ul li a {
  border-bottom: 1px solid rgb(250, 250, 240);
 }
 
+/* Main */
 main {
  grid-area: main;
  
@@ -110,6 +112,7 @@ button a {
  text-align: center;
 }
 
+/* Footer */
 footer {
  background-image: url(/images/Innehåll/liten-dansande-hamster.gif);
  background-repeat: repeat;
@@ -163,7 +166,6 @@ header{
  justify-self: center;  
 }
 
-
 .left-button {
  grid-area: left-button;
 }
@@ -172,7 +174,6 @@ header{
  grid-area: right-button;
 }
 
-
 footer {
  position: relative;
  bottom: 0;
@@ -180,7 +181,6 @@ footer {
  right: 0;
  grid-area: footer;
 }
-
 }
 /* ************************************************************************* */
 /* Desktop styles */
@@ -218,12 +218,6 @@ header{
  margin: 0 auto;
  object-fit: contain;
 }
-
-/* #hero {
- padding: 0;
- margin:0;
- height: 100%;
-} */
 
 .left-button,
 .right-button {
