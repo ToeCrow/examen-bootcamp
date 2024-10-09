@@ -79,13 +79,8 @@ main {
  
 }
 
-.hero {
- display: flex;
-
-}
-
-.hero img {
- justify-self: center;
+.main-start img {
+ margin: 0 auto;
  
 }
 
@@ -155,7 +150,7 @@ header{
   grid-area: main;
  }
 
- #hero img {
+ .main-start img {
   height: 100%;
   object-fit: contain;
  }
@@ -217,18 +212,18 @@ header{
  height: 100%;
 }
 
-#hero img {
+.main-start img {
  max-width: 100%; /* Använd max bredd för att passa i layouten */
  height: 100%;
  margin: 0 auto;
  object-fit: contain;
 }
 
-#hero {
+/* #hero {
  padding: 0;
  margin:0;
  height: 100%;
-}
+} */
 
 .left-button,
 .right-button {
